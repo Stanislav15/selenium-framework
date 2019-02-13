@@ -28,9 +28,15 @@ public class ExcelWriteDemo {
         //Write colum name
 
         Cell colum = workSheet.getRow(0).createCell(2);
+        if (colum==null){
+            colum = workSheet.getRow(0).createCell(2);
+        }
         colum.setCellValue("Continent");
 
         Cell cont1 = workSheet.getRow(1).createCell(2);
+        if (cont1==null){
+            workSheet.getRow(1).createCell(2);
+        }
         cont1.setCellValue("North America");
 
         //Save changes
